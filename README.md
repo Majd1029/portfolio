@@ -9,7 +9,6 @@ Personal portfolio of Majd Aguir, AI Engineer & Business Developer (Sousse, Tuni
   blocks and rebuilt in the browser, so the file needs JavaScript to display.
   Page content lives in the `__bundler/template` block.
 - `favicon.png` — site icon.
-- `favicon.svg` — vector version of the icon (not currently referenced by the page).
 
 ## Running locally
 
