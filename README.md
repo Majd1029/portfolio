@@ -8,6 +8,9 @@ Personal portfolio of Majd Aguir, AI Engineer & Business Developer (Sousse, Tuni
   light/dark toggle, the "Copy Email" button and scroll-in animations. No build step.
 - `avatar.jpg` — profile photo shown in the hero card.
 - `favicon.png` — site icon.
+- `og-image.png` — 1200×630 preview image shown when the link is shared.
+
+Live at https://majd1029.github.io/portfolio/.
 
 The Inter font loads from Google Fonts; everything else is local.
 
