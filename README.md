@@ -4,11 +4,12 @@ Personal portfolio of Majd Aguir, AI Engineer & Business Developer (Sousse, Tuni
 
 ## Structure
 
-- `index.html` — the whole site as a single self-unpacking bundle. The page markup,
-  fonts, profile photo and runtime are embedded as JSON in `<script type="__bundler/...">`
-  blocks and rebuilt in the browser, so the file needs JavaScript to display.
-  Page content lives in the `__bundler/template` block.
+- `index.html` — the whole site: plain HTML with inline CSS and a small script for the
+  light/dark toggle, the "Copy Email" button and scroll-in animations. No build step.
+- `avatar.jpg` — profile photo shown in the hero card.
 - `favicon.png` — site icon.
+
+The Inter font loads from Google Fonts; everything else is local.
 
 ## Running locally
 
@@ -20,6 +21,6 @@ python3 -m http.server 8000
 
 ## Editing content
 
-Text is stored as an escaped JSON string inside `index.html`, so edit it with care
-(for example with a small script that does exact string replacements) and reload the
-page to check it still renders.
+Edit the text directly in `index.html`. Sections are marked with comments
+(`Hero bento`, `About`, `Projects`, `Experience`, `Education`, `Contact`), and colours
+for both themes are defined as CSS variables at the top of the `<style>` block.
