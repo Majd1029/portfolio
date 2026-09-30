@@ -1,6 +1,6 @@
 # Majd Aguir — Portfolio
 
-Personal portfolio of Majd Aguir, AI Engineer & Business Developer (Sousse, Tunisia).
+Personal portfolio of Majd Aguir, AI & Data Science Engineer (Sousse, Tunisia).
 
 ## Structure
 
