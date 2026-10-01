@@ -241,6 +241,12 @@
 
     .flagship { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 8px; padding: 16px; transition: transform .25s ease, box-shadow .25s ease; }
     .flagship:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1); }
+    .flagship { position: relative; }
+    .flag-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: auto; }
+    .flag-links .text-link { margin-top: 0; }
+    /* The demo link covers the whole card; the code link sits above it. */
+    .stretched::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
+    .code-link { position: relative; z-index: 2; }
     .flagship .preview { height: auto; min-height: 280px; background: linear-gradient(135deg, #0b1b3f 0%, #1f4fbf 60%, #4f8cff 100%); }
     .flagship .body { padding: 18px 16px 12px 24px; display: flex; flex-direction: column; }
     .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
@@ -462,7 +468,7 @@
       </div>
 
       <div class="projects">
-        <a class="card flagship reveal" href="https://customer-support-ai-assistant-pi.vercel.app" target="_blank" rel="noopener">
+        <div class="card flagship reveal">
           <div class="preview">
             <span class="live">LIVE DEMO</span>
             <span class="link-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>
@@ -479,11 +485,16 @@
             <h3>Customer Support AI Assistant</h3>
             <p>Production-grade support assistant combining document intelligence, hybrid retrieval-augmented generation and multi-tier conversational memory in a fully self-hosted pipeline, backed by a 187-test suite.</p>
             <div class="chips"><span class="chip">Hybrid RAG · BGE-M3</span><span class="chip">Qdrant · RRF</span><span class="chip">FastAPI</span><span class="chip">React · TypeScript</span><span class="chip">LLM-as-Judge</span></div>
-            <span class="text-link">Try the live demo
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </span>
+            <div class="flag-links">
+              <a class="text-link stretched" href="https://customer-support-ai-assistant-pi.vercel.app" target="_blank" rel="noopener">Try the live demo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+              <a class="text-link code-link" href="https://github.com/Majd1029/Customer-Support-AI-Assistant" target="_blank" rel="noopener">View code
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
 
         <a class="card project reveal" href="https://majd-ocr-summarizer.streamlit.app" target="_blank" rel="noopener">
           <div class="preview p-ocr">
