@@ -241,9 +241,10 @@
 
     .flagship { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 8px; padding: 16px; transition: transform .25s ease, box-shadow .25s ease; }
     .flagship:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1); }
-    .flagship { position: relative; }
-    .flag-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: auto; }
-    .flag-links .text-link { margin-top: 0; }
+    .flagship, .project { position: relative; }
+    .card-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: auto; }
+    .card-links .text-link { margin-top: 0; }
+    .project .card-links { margin: 8px 8px 6px; }
     /* The demo link covers the whole card; the code link sits above it. */
     .stretched::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
     .code-link { position: relative; z-index: 2; }
@@ -485,7 +486,7 @@
             <h3>Customer Support AI Assistant</h3>
             <p>Production-grade support assistant combining document intelligence, hybrid retrieval-augmented generation and multi-tier conversational memory in a fully self-hosted pipeline, backed by a 187-test suite.</p>
             <div class="chips"><span class="chip">Hybrid RAG · BGE-M3</span><span class="chip">Qdrant · RRF</span><span class="chip">FastAPI</span><span class="chip">React · TypeScript</span><span class="chip">LLM-as-Judge</span></div>
-            <div class="flag-links">
+            <div class="card-links">
               <a class="text-link stretched" href="https://customer-support-ai-assistant-pi.vercel.app" target="_blank" rel="noopener">Try the live demo
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
               </a>
@@ -496,7 +497,7 @@
           </div>
         </div>
 
-        <a class="card project reveal" href="https://majd-ocr-summarizer.streamlit.app" target="_blank" rel="noopener">
+        <div class="card project reveal">
           <div class="preview p-ocr">
             <span class="live">LIVE DEMO</span>
             <span class="link-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>
@@ -506,9 +507,17 @@
           <h3>OCR Summarizer Agents</h3>
           <p>Multilingual OCR to Markdown with chapter summaries. Free Tesseract path, or Claude vision for handwriting and maths.</p>
           <div class="chips"><span class="chip">OCR</span><span class="chip">Tesseract</span><span class="chip">Claude</span></div>
-        </a>
+          <div class="card-links">
+            <a class="text-link stretched" href="https://majd-ocr-summarizer.streamlit.app" target="_blank" rel="noopener">Try the live demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="text-link code-link" href="https://github.com/Majd1029/OCR-Summarizer_Agents" target="_blank" rel="noopener">View code
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
 
-        <a class="card project reveal" href="https://majd1029-astro-image-classifier-app-x3ke9w.streamlit.app" target="_blank" rel="noopener">
+        <div class="card project reveal">
           <div class="preview p-astro">
             <span class="live">LIVE DEMO</span>
             <span class="link-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>
@@ -518,9 +527,17 @@
           <h3>Astro Image Classifier</h3>
           <p>Transfer-learned VGG19 + DenseNet201 ensemble classifying 11 astronomical classes on a held-out test split.</p>
           <div class="chips"><span class="chip">Ensemble CNN</span><span class="chip">Transfer Learning</span></div>
-        </a>
+          <div class="card-links">
+            <a class="text-link stretched" href="https://majd1029-astro-image-classifier-app-x3ke9w.streamlit.app" target="_blank" rel="noopener">Try the live demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="text-link code-link" href="https://github.com/Majd1029/Astro-Image-Classifier" target="_blank" rel="noopener">View code
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
 
-        <a class="card project reveal" href="https://majd-btc-forecast.streamlit.app" target="_blank" rel="noopener">
+        <div class="card project reveal">
           <div class="preview p-btc">
             <span class="live">LIVE DEMO</span>
             <span class="link-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>
@@ -530,7 +547,15 @@
           <h3>Bitcoin Price Forecasting</h3>
           <p>XGBoost, LSTM and KMeans forecasts of BTC-USD, benchmarked against a naive persistence baseline that most of them fail to beat.</p>
           <div class="chips"><span class="chip">Time Series</span><span class="chip">Baselines</span></div>
-        </a>
+          <div class="card-links">
+            <a class="text-link stretched" href="https://majd-btc-forecast.streamlit.app" target="_blank" rel="noopener">Try the live demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="text-link code-link" href="https://github.com/Majd1029/Bitcoin_Price_Forecasting" target="_blank" rel="noopener">View code
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
 
         <a class="card project wide reveal" href="https://github.com/Majd1029/RAG-Study-Assistant" target="_blank" rel="noopener">
           <div class="preview p-rag">
