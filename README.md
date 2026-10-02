@@ -10,7 +10,8 @@ Personal portfolio of Majd Aguir, AI & Data Science Engineer (Sousse, Tunisia).
 - `favicon.png` — site icon.
 - `og-image.png` — 1200×630 preview image shown when the link is shared.
 
-Live at https://majd1029.github.io/portfolio/.
+Live at https://majd-aguir.vercel.app (deployed by Vercel on every push to `main`).
+The old GitHub Pages address, majd1029.github.io/portfolio, redirects there.
 
 The Inter font loads from Google Fonts; everything else is local.
 
