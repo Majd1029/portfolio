@@ -268,6 +268,8 @@
     /* Analytics portfolio */
     .analytics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
     .analytics-card { padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    .analytics-card-wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 28px; }
+    .analytics-card-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
     .analytics-platform { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
     .analytics-card h3 { font-size: 22px; letter-spacing: -.02em; line-height: 1.25; }
     .analytics-card p { color: var(--muted); font-size: 15px; }
@@ -285,6 +287,7 @@
     .analytics-note { color: var(--muted); font-size: 13px; margin: 20px 8px 0; }
     .analytics-card a:focus-visible, .analytics-card summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
     @media (max-width: 760px) { .analytics-grid { grid-template-columns: 1fr; } .analytics-card { padding: 24px; } }
+    @media (max-width: 760px) { .analytics-card-wide { grid-template-columns: minmax(0, 1fr); } }
 
     /* Experience */
     .timeline { padding: 8px 30px; }
@@ -666,15 +669,16 @@
           <div class="chips"><span class="chip">National Reporting</span><span class="chip">Dashboarding</span></div>
           <a class="text-link" href="https://datastudio.google.com/reporting/2ce9a114-d5ef-495d-b730-22aaee3919cd" target="_blank" rel="noopener noreferrer">View national tracker <span aria-hidden="true">↗</span></a>
         </article>
-        <article class="card analytics-card reveal">
-          <span class="analytics-platform">Google Sheets · Portugal · 2026 S1</span>
-          <h3>Portugal Network Performance Tracker</h3>
+        <article class="card analytics-card analytics-card-wide reveal">
           <figure>
             <a class="dashboard-preview" href="https://docs.google.com/spreadsheets/d/1dSkLVNg15aiOIwsgZn0JqsfWr6kNDOfDEYqSjVyakHY/preview" target="_blank" rel="noopener noreferrer" aria-label="View Portugal Network Performance Tracker in Google Sheets">
               <img src="assets/analytics/portugal-network-performance-tracker.png" alt="Network Performance Tracker cover for AIESEC in Portugal, featuring Majd Aguir." width="1639" height="960" loading="lazy" decoding="async">
             </a>
             <figcaption class="dashboard-caption">Select the cover to view the spreadsheet dashboard</figcaption>
           </figure>
+          <div class="analytics-card-body">
+          <span class="analytics-platform">Google Sheets · Portugal · 2026 S1</span>
+          <h3>Portugal Network Performance Tracker</h3>
           <p>A spreadsheet dashboard bringing monthly performance, local committee reporting, network rankings and exchange partner tracking together.</p>
           <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Plan vs. Actual</span><span class="chip">Monthly Reporting</span></div>
           <details><summary>Explore the report scope</summary>
@@ -683,6 +687,7 @@
             <p><strong>Workbook coverage:</strong> Global and regional rankings, national local committee rankings, monthly and local committee dashboards, and outgoing and incoming exchange partner tabs.</p>
           </details>
           <a class="text-link" href="https://docs.google.com/spreadsheets/d/1dSkLVNg15aiOIwsgZn0JqsfWr6kNDOfDEYqSjVyakHY/preview" target="_blank" rel="noopener noreferrer">View spreadsheet dashboard <span aria-hidden="true">↗</span></a>
+          </div>
         </article>
       </div>
       <p class="analytics-note">Power BI previews are static PDF exports; filters are available in the original reports. Online reports open in a new tab. Google sign-in or report access may be required.</p>
