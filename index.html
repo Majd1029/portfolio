@@ -265,6 +265,28 @@
     .kpi small { font-size: 11.5px; opacity: .85; }
     .text-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; color: var(--accent); margin-top: auto; }
 
+    /* Analytics portfolio */
+    .analytics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .analytics-card { padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    .analytics-card:last-child { grid-column: 1 / -1; }
+    .analytics-platform { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+    .analytics-card h3 { font-size: 22px; letter-spacing: -.02em; line-height: 1.25; }
+    .analytics-card p { color: var(--muted); font-size: 15px; }
+    .analytics-card details { border-top: 1px solid var(--border); padding-top: 14px; }
+    .analytics-card summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+    .analytics-card details p { margin-top: 12px; }
+    .analytics-card details strong { color: var(--text); }
+    .analytics-card .text-link { align-self: flex-start; }
+    .dashboard-preview { display: block; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); background: #fff; }
+    .dashboard-preview img { width: 100%; height: auto; transition: opacity .2s; }
+    .dashboard-preview:hover img { opacity: .88; }
+    .dashboard-caption { font-size: 12px; color: var(--muted); margin-top: 7px; }
+    .dashboard-pages { display: grid; gap: 16px; margin-top: 16px; }
+    .dashboard-pages figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .analytics-note { color: var(--muted); font-size: 13px; margin: 20px 8px 0; }
+    .analytics-card a:focus-visible, .analytics-card summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    @media (max-width: 760px) { .analytics-grid { grid-template-columns: 1fr; } .analytics-card { padding: 24px; } }
+
     /* Experience */
     .timeline { padding: 8px 30px; }
     .job { display: grid; grid-template-columns: 170px 1fr; gap: 28px; padding: 26px 0; }
@@ -363,6 +385,7 @@
       <nav class="links" aria-label="Sections">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#analytics">Analytics</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
       </nav>
@@ -579,6 +602,82 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ===== Data Analytics ===== -->
+    <section id="analytics" aria-labelledby="analytics-title">
+      <div class="sec-head"><div><h2 id="analytics-title">Data Analytics &amp; Dashboards</h2><p>Workforce analysis, exchange performance and network reporting</p></div></div>
+      <div class="analytics-grid">
+        <article class="card analytics-card reveal">
+          <span class="analytics-platform">Power BI</span>
+          <h3>HR Analytics &amp; Attrition</h3>
+          <figure>
+            <a class="dashboard-preview" href="assets/analytics/hr-analytics.pdf" target="_blank" rel="noopener" aria-label="Open HR analytics dashboard PDF in a new tab">
+              <img src="assets/analytics/hr-analytics-1.png" alt="HR analytics dashboard with employee and attrition KPIs, age and salary breakdowns, and a job satisfaction matrix." width="1600" height="926" loading="lazy" decoding="async">
+            </a>
+            <figcaption class="dashboard-caption">Power BI report export · Select the preview to view the PDF</figcaption>
+          </figure>
+          <p>A workforce report that brings employee counts, attrition rate, average age, salary and tenure into one view, with a department filter for focused analysis.</p>
+          <div class="chips"><span class="chip">HR Analytics</span><span class="chip">Attrition</span><span class="chip">KPI Reporting</span></div>
+          <details><summary>Explore the report scope</summary>
+            <p><strong>Analysis question:</strong> How is employee attrition distributed across the workforce?</p>
+            <p><strong>Report views:</strong> Attrition by education, age group, salary band, job role, tenure and gender, plus a job-satisfaction matrix.</p>
+            <p><strong>Interaction:</strong> A department slicer supports comparison of workforce segments alongside the headline metrics.</p>
+          </details>
+          <a class="text-link" href="assets/analytics/hr-analytics.pdf" target="_blank" rel="noopener">View HR report PDF <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card analytics-card reveal">
+          <span class="analytics-platform">Power BI</span>
+          <h3>Network Tracker Dashboard</h3>
+          <figure>
+            <a class="dashboard-preview" href="assets/analytics/network-tracker.pdf" target="_blank" rel="noopener" aria-label="Open the three-page network tracker PDF in a new tab">
+              <img src="assets/analytics/network-tracker-1.png" alt="Network tracker overview with exchange program rankings, an approvals map, entity comparisons and a goal tracker." width="1600" height="926" loading="lazy" decoding="async">
+            </a>
+            <figcaption class="dashboard-caption">Power BI report export · 3 pages · Select the preview to view the PDF</figcaption>
+          </figure>
+          <p>A three-page report connecting network rankings with incoming and outgoing exchange performance, including stage totals and growth comparisons.</p>
+          <div class="chips"><span class="chip">Performance Tracking</span><span class="chip">Growth Measures</span><span class="chip">Rankings</span></div>
+          <details><summary>Explore the report scope</summary>
+            <p><strong>Analysis question:</strong> How does exchange performance vary by local committee, program and month?</p>
+            <p><strong>Report views:</strong> Home presents network rankings and a geographic view. The oGX and iCX pages follow exchange stages and compare results with a prior period.</p>
+            <p><strong>Interaction:</strong> Local committee, program and month slicers support focused comparisons, with bar charts and program breakdowns.</p>
+          </details>
+          <details><summary>Preview outgoing &amp; incoming exchange pages</summary>
+            <div class="dashboard-pages">
+              <figure><a class="dashboard-preview" href="assets/analytics/network-tracker.pdf#page=2" target="_blank" rel="noopener" aria-label="Open outgoing exchange PDF page"><img src="assets/analytics/network-tracker-2.png" alt="Outgoing exchange report with local committee approvals, program breakdown and a comparison of exchange stages across two terms." width="1600" height="926" loading="lazy" decoding="async"></a><figcaption>Outgoing exchange (oGX)</figcaption></figure>
+              <figure><a class="dashboard-preview" href="assets/analytics/network-tracker.pdf#page=3" target="_blank" rel="noopener" aria-label="Open incoming exchange PDF page"><img src="assets/analytics/network-tracker-3.png" alt="Incoming exchange report with local committee realizations, program breakdown and a comparison of exchange stages across two terms." width="1600" height="926" loading="lazy" decoding="async"></a><figcaption>Incoming exchange (iCX)</figcaption></figure>
+            </div>
+          </details>
+          <a class="text-link" href="assets/analytics/network-tracker.pdf" target="_blank" rel="noopener">View full network report PDF <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card analytics-card reveal">
+          <span class="analytics-platform">Looker Studio</span>
+          <h3>OGX Dashboard</h3>
+          <p>An outgoing exchange dashboard, available as a linked Looker Studio report.</p>
+          <div class="chips"><span class="chip">Outgoing Exchange</span><span class="chip">Dashboarding</span></div>
+          <a class="text-link" href="https://datastudio.google.com/reporting/3d793b37-11e8-4999-94ad-ba399ee23d17" target="_blank" rel="noopener noreferrer">Open OGX report <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card analytics-card reveal">
+          <span class="analytics-platform">Looker Studio</span>
+          <h3>IR National Tracker</h3>
+          <p>A national tracking report, available to explore in Looker Studio.</p>
+          <div class="chips"><span class="chip">National Reporting</span><span class="chip">Dashboarding</span></div>
+          <a class="text-link" href="https://datastudio.google.com/reporting/2ce9a114-d5ef-495d-b730-22aaee3919cd" target="_blank" rel="noopener noreferrer">Open national tracker <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card analytics-card reveal">
+          <span class="analytics-platform">Google Sheets · Portugal · 2026 S1</span>
+          <h3>Portugal Network Performance Tracker</h3>
+          <p>A spreadsheet dashboard bringing monthly performance, local committee reporting, network rankings and exchange partner tracking together.</p>
+          <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Plan vs. Actual</span><span class="chip">Monthly Reporting</span></div>
+          <details><summary>Explore the report scope</summary>
+            <p><strong>Analysis question:</strong> How are local committees progressing against their exchange plans?</p>
+            <p><strong>Monthly dashboard:</strong> Planned and completed approvals and realizations appear alongside achievement and growth comparisons.</p>
+            <p><strong>Workbook coverage:</strong> Global and regional rankings, national local committee rankings, monthly and local committee dashboards, and outgoing and incoming exchange partner tabs.</p>
+          </details>
+          <a class="text-link" href="https://docs.google.com/spreadsheets/d/1dSkLVNg15aiOIwsgZn0JqsfWr6kNDOfDEYqSjVyakHY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open spreadsheet dashboard <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="analytics-note">Power BI previews are static PDF exports; filters are available in the original reports. Online reports open in a new tab. Google sign-in or report access may be required.</p>
     </section>
 
     <!-- ===== Experience ===== -->
